@@ -54,7 +54,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/dollar_sign"/>
+            android:src="@drawable/dollar_sign2"/>
 
         <TextView
             android:layout_width="wrap_content"
