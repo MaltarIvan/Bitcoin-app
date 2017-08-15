@@ -1,4 +1,4 @@
-package hr.apps.maltar.bitcoin.entities.bitcoinStatusEnteties;
+package hr.apps.maltar.bitcoin.entities.bitcoinStatusEnteties.currencyEntities;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by Maltar on 15.8.2017..
  */
 
-public class USD {
+public class EUR {
 
     @SerializedName("code")
     @Expose

@@ -3,6 +3,10 @@ package hr.apps.maltar.bitcoin.entities.bitcoinStatusEnteties;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import hr.apps.maltar.bitcoin.entities.bitcoinStatusEnteties.currencyEntities.EUR;
+import hr.apps.maltar.bitcoin.entities.bitcoinStatusEnteties.currencyEntities.GBP;
+import hr.apps.maltar.bitcoin.entities.bitcoinStatusEnteties.currencyEntities.USD;
+
 /**
  * Created by Maltar on 15.8.2017..
  */
