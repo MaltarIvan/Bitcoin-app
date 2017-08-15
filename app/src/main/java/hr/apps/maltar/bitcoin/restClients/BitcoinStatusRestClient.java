@@ -1,6 +1,6 @@
 package hr.apps.maltar.bitcoin.restClients;
 
-import hr.apps.maltar.bitcoin.entities.bitcoinStatusEnteties.BitcoinStatus;
+import hr.apps.maltar.bitcoin.entities.BitcoinStatus;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
@@ -9,6 +9,6 @@ import retrofit2.http.GET;
  */
 
 public interface BitcoinStatusRestClient {
-    @GET("/v1/bpi/currentprice.json")
+    @GET("/api/ticker/")
     Call<BitcoinStatus> getBitcoinStatus();
 }
