@@ -16,4 +16,7 @@
     <string name="main_settings_eur_label">EUR €</string>
     <string name="main_settings_eur_value_label">EUR €</string>
     <string name="main_settings_eur_value">btceur</string>
+
+    <!-- Bitcoin wallet preference key -->
+    <string name="bitcoin_wallet_key">bitcoin_wallet</string>
 </resources>

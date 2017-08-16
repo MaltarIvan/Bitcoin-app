@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -86,6 +87,15 @@ public class MainScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 refreshData();
+            }
+        });
+
+        ImageButton niceHashButton = (ImageButton) findViewById(R.id.enter_nice_hash_button);
+        niceHashButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NiceHashActivity.class);
+                startActivity(intent);
             }
         });
 

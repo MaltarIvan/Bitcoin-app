@@ -185,4 +185,18 @@
         android:background="@android:color/black">
     </View>
 
+    <ImageButton
+        android:id="@+id/enter_nice_hash_button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/nicehash"
+        android:text="Nice Hash"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black">
+    </View>
+
 </LinearLayout>
