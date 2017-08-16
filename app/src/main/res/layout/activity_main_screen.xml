@@ -51,14 +51,18 @@
         android:gravity="left">
 
         <ImageView
+            android:id="@+id/currency_sign_image"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/dollar_sign2"/>
 
         <TextView
+            android:id="@+id/currency_name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
             android:gravity="center"
             android:text="USD: "/>
 
@@ -67,13 +71,111 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
             tools:text="666.66"/>
 
         <ImageView
             android:id="@+id/arrow_image_view"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            tools:src="@drawable/up_arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            style="@style/CurrencyStatusStyle"
+            android:text="Current BTC price: "/>
+
+        <TextView
+            android:id="@+id/current_BTC_price_text_view"
+            style="@style/CurrencyStatusValueStyle"
+            tools:text="666.66"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            style="@style/CurrencyStatusStyle"
+            android:text="Last 24h price high: "/>
+
+        <TextView
+            android:id="@+id/high_BTC_price_text_view"
+            style="@style/CurrencyStatusValueStyle"
+            tools:text="666.66"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            style="@style/CurrencyStatusStyle"
+            android:text="Last 24h price low: "/>
+
+        <TextView
+            android:id="@+id/low_BTC_price_text_view"
+            style="@style/CurrencyStatusValueStyle"
+            tools:text="666.66"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            style="@style/CurrencyStatusStyle"
+            android:text="Last 24h "/>
+
+        <TextView
+            android:id="@+id/vwa_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textColor="@android:color/holo_green_dark"
+            android:background="@color/LightGray"
+            android:textSize="24sp"
+            android:text="@string/vwap"/>
+
+        <TextView
+            android:id="@+id/vwa_BTC_price_text_view"
+            style="@style/CurrencyStatusValueStyle"
+            tools:text="666.66"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            style="@style/CurrencyStatusStyle"
+            android:text="First BTC price of the day: "/>
+
+        <TextView
+            android:id="@+id/first_BTC_price_text_view"
+            style="@style/CurrencyStatusValueStyle"
+            tools:text="666.66"/>
 
     </LinearLayout>
 
@@ -82,13 +184,5 @@
         android:layout_height="1dp"
         android:background="@android:color/black">
     </View>
-
-
-
-    <ListView
-        android:id="@+id/currency_data_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
 
 </LinearLayout>

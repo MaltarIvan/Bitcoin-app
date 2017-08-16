@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">BitCoin$</string>
+    <string name="vwap"><u>vwa price:</u></string>
+
+    <!-- Strings for currency preference -->
+    <string name="main_settings_currency_label">Currency</string>
+    <string name="main_settings_currency_key">currency</string>
+    <string name="settings_currency_default">btcusd</string>
+
+    <!-- Label for USD currency option -->
+    <string name="main_settings_usd_label">USD $</string>
+    <string name="main_settings_usd_value_label">USD $</string>
+    <string name="main_settings_usd_value">btcusd</string>
+
+    <!-- Label for EUR currency option -->
+    <string name="main_settings_eur_label">EUR €</string>
+    <string name="main_settings_eur_value_label">EUR €</string>
+    <string name="main_settings_eur_value">btceur</string>
 </resources>
