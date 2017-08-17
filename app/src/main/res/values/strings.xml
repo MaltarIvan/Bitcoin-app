@@ -18,5 +18,8 @@
     <string name="main_settings_eur_value">btceur</string>
 
     <!-- Bitcoin wallet preference key -->
-    <string name="bitcoin_wallet_key">bitcoin_wallet</string>
+    <string name="bitcoin_wallet_key">BTCAddress</string>
+
+    <!-- Shared Preference Key -->
+    <string name="shared_preference_key">hr.apps.maltar.bitcoin.PREFERENCE_FILE_KEY</string>
 </resources>

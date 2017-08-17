@@ -22,8 +22,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="hr.apps.maltar.bitcoin.MainScreenActivity" />
         </activity>
-        <activity android:name=".NiceHashActivity" />
-        <activity android:name=".AddBitcoinWalletActivity"></activity>
+        <activity android:name=".NiceHashActivity"></activity>
+        <activity android:name=".AddBitcoinWalletActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hr.apps.maltar.bitcoin.MainScreenActivity" />
+        </activity>
     </application>
 
 </manifest>

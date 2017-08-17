@@ -1,8 +1,7 @@
 package hr.apps.maltar.bitcoin;
 
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +13,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 public class AddBitcoinWalletActivity extends AppCompatActivity {
+    private static final int ENTER_BTC_WALLET_ADDRESS_REQUEST = 0;
 
     private final static String ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 
@@ -23,22 +23,30 @@ public class AddBitcoinWalletActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_bitcoin_wallet);
 
         final EditText addBTCWalletAddress = (EditText) findViewById(R.id.enter_btc_wallet_address_edit_text);
+        //addBTCWalletAddress.setText("1EWD4jswmKECgwBjkkfjHijcHPf4dSiViy");
         Button enterAddressButton = (Button) findViewById(R.id.enter_btc_wallet_address_button);
 
         enterAddressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validateBitcoinAddress(addBTCWalletAddress.getText().toString())) {
-                    Toast.makeText(getApplicationContext(), "adressa je dobra.", Toast.LENGTH_SHORT).show();
-                    SharedPreferences prefrences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                    prefrences.edit().putString(getString(R.string.bitcoin_wallet_key), addBTCWalletAddress.getText().toString());
+                String enteredAddress = addBTCWalletAddress.getText().toString();
+                if (validateBitcoinAddress(enteredAddress)) {
+                    Intent intent = new Intent();
+                    intent.putExtra(getString(R.string.bitcoin_wallet_key), enteredAddress);
+                    setResult(ENTER_BTC_WALLET_ADDRESS_REQUEST, intent);
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Wrong address format!", Toast.LENGTH_SHORT).show();
-                    addBTCWalletAddress.setText("");
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, MainScreenActivity.class);
+        startActivity(intent);
     }
 
     private boolean validateBitcoinAddress(String addr) {
