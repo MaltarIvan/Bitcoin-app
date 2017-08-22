@@ -20,4 +20,21 @@
         android:textColor="@android:color/black"
         tools:text="g7tzgz7GibzG89u8hzZ6tG1f"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ListView
+            android:id="@+id/nice_hash_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </LinearLayout>
